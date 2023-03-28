@@ -37,6 +37,13 @@ void modulus(){
     printf("\n%d %% %d = %d\n", a, b, a%b);
 }
 
+void square_root(){
+    int a;
+    printf("Enter the number: ");
+    scanf("%d", &a);
+    printf("\n%c%d = %.3lf\n", 251, a, sqrt(a));
+}
+
 int main(){
     char operation;
     printf("\t\t\t\tCalculator app\n");
@@ -44,7 +51,8 @@ int main(){
     printf("\n\t -  subtraction");
     printf("\n\t *  multiplication");
     printf("\n\t /  division");
-    printf("\n\t %%  modulus\n");
+    printf("\n\t %%  modulus");
+    printf("\n\t s  square root\n");
     printf("\nEnter the operation: ");
     scanf("%c", &operation);
     if(operation=='+')
@@ -57,5 +65,7 @@ int main(){
         division();
     else if(operation=='%')
         modulus();
+    else if(operation=='s')
+        square_root();
     return 0;
 }
