@@ -30,13 +30,21 @@ void division(){
     printf("\n%d / %d = %.3lf\n", a, b, (double)a/b);
 }
 
+void modulus(){
+    int a, b;
+    printf("Enter the number and its divisor: ");
+    scanf("%d %d", &a, &b);
+    printf("\n%d %% %d = %d\n", a, b, a%b);
+}
+
 int main(){
     char operation;
     printf("\t\t\t\tCalculator app\n");
     printf("\n\t +  addition");
     printf("\n\t -  subtraction");
     printf("\n\t *  multiplication");
-    printf("\n\t /  division\n");
+    printf("\n\t /  division");
+    printf("\n\t %%  modulus\n");
     printf("\nEnter the operation: ");
     scanf("%c", &operation);
     if(operation=='+')
@@ -47,5 +55,7 @@ int main(){
         multiplication();
     else if(operation=='/')
         division();
+    else if(operation=='%')
+        modulus();
     return 0;
 }
