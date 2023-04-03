@@ -44,6 +44,13 @@ void square_root(){
     printf("\n%c%d = %.3lf\n", 251, a, sqrt(a));
 }
 
+void power(){
+    int a, b;
+    printf("Enter the base and the exponent: ");
+    scanf("%d %d", &a, &b);
+    printf("\n%d ^ %d = %.1lf\n", a, b, pow(a, b));
+}
+
 int main(){
     char operation;
     printf("\t\t\t\tCalculator app\n");
@@ -52,7 +59,8 @@ int main(){
     printf("\n\t *  multiplication");
     printf("\n\t /  division");
     printf("\n\t %%  modulus");
-    printf("\n\t s  square root\n");
+    printf("\n\t s  square root");
+    printf("\n\t ^  power\n");
     printf("\nEnter the operation: ");
     scanf("%c", &operation);
     if(operation=='+')
@@ -67,5 +75,7 @@ int main(){
         modulus();
     else if(operation=='s')
         square_root();
+    else if(operation=='^')
+        power();
     return 0;
 }
