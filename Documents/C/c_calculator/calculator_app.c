@@ -44,6 +44,19 @@ void square_root(){
     printf("\n%c%d = %.3lf\n", 251, a, sqrt(a));
 }
 
+void average(){
+    int num, sum=0, cnt=0;
+    printf("\nEnter the numbers (press -1 to stop): ");
+    while(1){
+        scanf("%d", &num);
+        if(num==-1)
+            break;
+        sum+=num;
+        cnt++;
+    }
+    printf("\nThe average is %.2lf\n", (double)sum/cnt);
+}
+
 void power(){
     int a, b;
     printf("Enter the base and the exponent: ");
@@ -60,7 +73,8 @@ int main(){
     printf("\n\t /  division");
     printf("\n\t %%  modulus");
     printf("\n\t s  square root");
-    printf("\n\t ^  power\n");
+    printf("\n\t ^  power");
+    printf("\n\t a  average of n numbers\n");
     printf("\nEnter the operation: ");
     scanf("%c", &operation);
     if(operation=='+')
@@ -77,5 +91,7 @@ int main(){
         square_root();
     else if(operation=='^')
         power();
+    else if(operation=='a')
+        average();
     return 0;
 }
